@@ -5,8 +5,7 @@ const Server = () => {
   const { MovieId, setWatchInfo, watchInfo, MovieInfo, episode, season } =
     useWatchContext();
 
-    const MovieVideoPlayers = {
-      sk3:`https://vidlink.pro/movie/${MovieId}`, 
+    sk3:`https://vidlink.pro/movie/${MovieId}`, 
       "vidsrc.dev": `https://vidsrc.dev/embed/movie/${MovieId}`,
       "vidsrc.cc": `https://vidsrc.cc/v2/embed/movie/${MovieId}`,
       vidsrc: `https://vidsrc.in/embed/movie/${MovieId}`,
@@ -33,7 +32,7 @@ const Server = () => {
       sk3:`https://vidlink.pro/tv/${MovieId}/${season}/${episode}`, 
       sk4:`https://embed.rgshows.me/api/2/tv/?id=${MovieId}&s=${season}&e=${episode}`,
     };
-  
+
   const MovievideoPlayerEntry = Object.entries(MovieVideoPlayers);
   const TVVideoPlayerEntry = Object.entries(TVVideoPlayers);
 
@@ -73,7 +72,7 @@ const Server = () => {
 
   return (
     <div className="w-full flex flex-col gap-1">
-      <div className="bg-[#323044] w-full h-full px-4 flex items-center gap-8 max-[880px]:py-2">
+      <div className="bg-[#323044] w-full h-full px-4 flex items-center gap-8 max-[880px]:py-2 max-[515px]:flex-col max-[515px]:gap-5">
         <div className="flex items-center">
           <span>
             <svg
@@ -94,7 +93,7 @@ const Server = () => {
           </span>
           Server
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap max-[515px]:justify-center" >
           {(MovieInfo?.type === "movie"
             ? MovievideoPlayerEntry
             : TVVideoPlayerEntry
@@ -111,7 +110,7 @@ const Server = () => {
         </div>
       </div>
 
-      <div className="bg-[#323044] w-full h-full px-4 flex items-center gap-8 max-[880px]:py-2"></div>
+      <div className="bg-[#323044] w-full h-full px-4 flex items-center gap-8 min-[1396px]:hidden max-[880px]:py-2"></div>
     </div>
   );
 };
