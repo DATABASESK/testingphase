@@ -6,8 +6,8 @@ const Server = () => {
     useWatchContext();
 
     sk3:`https://vidlink.pro/movie/${MovieId}`, 
-      "vidsrc.dev": `https://vidsrc.dev/embed/movie/${MovieId}`,
-      "vidsrc.cc": `https://vidsrc.cc/v2/embed/movie/${MovieId}`,
+      vidsrcdev: `https://vidsrc.dev/embed/movie/${MovieId}`,
+      vidsrccc: `https://vidsrc.cc/v2/embed/movie/${MovieId}`,
       vidsrc: `https://vidsrc.in/embed/movie/${MovieId}`,
       vidsrcpro: `https://vidsrc.pro/embed/movie/${MovieId}`,
       autoembed: `https://player.autoembed.cc/embed/movie/${MovieId}`,
