@@ -58,7 +58,7 @@ export default function Custom404() {
       </div>
       
       <footer className="w-full text-center py-4 text-white text-sm bg-[#001f3d] mt-auto">
-  &copy; 2025 All rights reserved | Last updated: {new Date().toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata' })}
+  &copy; 2025 All rights reserved | Skyt Productivity Pvt. Ltd
 </footer>
 
     </>
